@@ -26,7 +26,7 @@
                 <img src="assets/logo.svg" alt="Store Logo">
             </div>
 
-            <ul class="menu">
+            <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Products</a></li>
@@ -36,9 +36,16 @@
             <div>
                 <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
                 <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-                <a href="#"><i class="fa-solid fa-bars"></i></a>
+                <a id="hamburger-btn" href="#"><i class="fa-solid fa-bars"></i></a>
             </div>
         </nav>
+
+        <ul id="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Support</a></li>
+        </ul>
     </header>
 
 
@@ -105,6 +112,13 @@
         </div>
     </footer>
 
+    <script>
+        function toggleMenu() {
+            document.getElementById("menu").classList.toggle("open");
+        }
+        const hamburgerBtn = document.getElementById("hamburger-btn");
+        hamburgerBtn.onclick = toggleMenu;
+    </script>
 </body>
 
 </html>
