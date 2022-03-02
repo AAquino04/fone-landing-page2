@@ -1,0 +1,169 @@
+* { box-sizing: border-box; }
+
+body {
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;;
+}
+
+ul { list-style: none;}
+
+a {
+    text-decoration: none;
+    display: block;
+    padding: 15px;
+    color: #000;
+}
+
+header, main, footer { max-width: 90%; margin: 0 auto; }
+
+/* Header */
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav .logo img {
+    height: 4rem;
+}
+
+header ul {
+    margin: 0;
+    padding: 0;
+    flex: 1;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+header ul li a:hover { border-bottom: 3px solid #ca3b3a; }
+header ul { display: none;}
+
+header nav div:last-child {
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 20%;
+}
+
+/* Hamburger */
+
+
+/* Sidebar */
+aside { display: block; }
+aside a {
+    padding: 2px;
+    margin: 5rem 0;
+    color: #ca3b3a;
+    font-size: 1.3rem;
+}
+
+/* Main */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+}
+
+main .fone {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    align-items: center;
+}
+
+main .fone .fone-img img {
+    display: block;
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+main .fone .fone-data > h1 {
+    text-transform: uppercase;
+    color: #ca3b3a;
+    font-weight: 700;
+}
+
+main .fone .fone-data > p { font-weight: 700; }
+
+main .fone .fone-data .fone-rating {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    color: #ca3b3a;
+}
+
+main .fone .fone-data .fone-rating p { padding-left: 10px; font-weight: 700;}
+main .fone .fone-data .fone-info > p { margin: 0; }
+
+main .fone .fone-data .fone-info p:first-of-type { font-weight: 700; }
+main .fone .fone-data .fone-info p:last-of-type {
+    font-weight: 300;
+    margin-bottom: 15px;
+    color: #707070;
+}
+
+main .fone .fone-data .cart {
+    display: flex;
+    align-items: center;
+}
+
+main .fone .fone-data .cart p { font-weight: 700; }
+
+main .fone .fone-data .cart a {
+    background-color: #ca3b3a;
+    color: #fff;
+    text-align: center;
+    margin-left: 10px;
+    flex: 1;
+}
+main .fone .fone-data .cart a:hover { background-color: #000; }
+
+/* Footer */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: #fcf7da;
+    border-radius: 8px;
+    font-size: .8rem;
+}
+
+footer .footer-items { margin: 0 auto; }
+footer .footer-items i {width: 20px; font-size: 1.1rem; text-align: center;}
+
+footer .footer-items div {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+
+footer .footer-items div p {
+    margin-left:10px;
+}
+
+@media only screen and (min-width: 1024px) {
+    header, main, footer { max-width: 1200px; margin: 0 auto; } 
+    header ul { display: flex; justify-content: center; }
+    header nav div:last-child { justify-content: space-around; }
+
+    aside { display: block; }
+
+    main { margin: 20px auto 7rem auto; }
+    main .fone { flex-direction: row;  justify-content: space-around;}
+    main .fone .fone-img { flex-basis: 50%;}
+    main .fone .fone-data .cart { justify-content: space-between; }
+    main .fone .fone-data .cart a { flex-basis: 50%; flex-grow: 0;}
+    main .fone .fone-data .cart h2 { flex: 1;}
+
+    footer { padding: 15px; }
+    footer .footer-items {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    footer .footer-items div { font-size: .875rem; flex-basis: 29%;}
+    footer .footer-items div i { font-size: 1.2rem; }
+}
