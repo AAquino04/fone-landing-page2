@@ -24,9 +24,7 @@ header nav {
     align-items: center;
 }
 
-header nav .logo img {
-    height: 4rem;
-}
+header nav .logo img { height: 4rem; }
 
 header nav div:last-child {
     display: flex;
@@ -34,7 +32,18 @@ header nav div:last-child {
     flex-basis: 20%;
 }
 
-/* Hamburger */
+/* Necessary to apply hover effect */
+header ul li a { display: flex; flex-direction: column;}
+header ul li a::after {
+    content: "";
+    background-color: #ca3b3a;
+    height: 3px;
+    width: 0%;
+    transition: width .7s;
+}
+header ul li a:hover::after { width: 100%;}
+
+/* Hamburger menu */
 header ul {
     margin: 0;
     padding: 0;
@@ -42,12 +51,11 @@ header ul {
     display: flex;
     justify-content: space-evenly;
 }
-header ul li a:hover { border-bottom: 3px solid #ca3b3a; }
+
 header ul { display: none;}
 .open {display: flex;}
 
 /* Sidebar */
-aside { display: block; }
 aside a {
     padding: 2px;
     margin: 5rem 0;
